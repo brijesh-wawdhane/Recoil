@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2020_10_09_155547) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.boolean "display_in_navbar"
+    t.boolean "display_in_navbar", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

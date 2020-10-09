@@ -7,6 +7,14 @@
 <%= link_to cat.name, articles_path(category: cat.name) %>
 <% end %>
 
+<br/>
+<hr>
+<br/>
+
+<p>Navbar Categories</p>
+<% Category.where(display_in_navbar: true).each do |cat| %>
+<%= link_to cat.name, articles_path(category: cat.name) %>
+<% end %>
 <table>
   <thead>
     <tr>
