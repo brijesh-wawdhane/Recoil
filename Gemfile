@@ -9,6 +9,8 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 gem 'pg', '>= 0.18', '< 2.0'
 # Forms made easy!
 gem 'simple_form', '~> 5.0', '>= 5.0.3'
+# Flexible authentication solution for Rails with Warden
+gem 'devise', '~> 4.7', '>= 4.7.3'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
