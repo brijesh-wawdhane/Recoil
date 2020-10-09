@@ -2,6 +2,11 @@
 
 <h1>Articles | <%= link_to 'New category', new_category_path %></h1>
 
+<p>All Categories</p>
+<% Category.all.each do |cat| %>
+<%= link_to cat.name, articles_path(category: cat.name) %>
+<% end %>
+
 <table>
   <thead>
     <tr>
@@ -18,8 +23,8 @@
       <tr>
         <td><%= article.title %></td>
         <td><%= article.content %></td>
-        <td><%= article.category_id %></td>
-        <td><%= article.user_id %></td>
+        <td><%= article.category.name %></td>
+        <td><%= article.user.name %></td>
         <td><%= link_to 'Show', article %></td>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>
         <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
