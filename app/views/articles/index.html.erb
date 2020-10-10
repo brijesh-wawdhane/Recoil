@@ -47,7 +47,7 @@
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.title %></td>
-        <td><%= article.content %></td>
+        <td><%= article.content.html_safe %></td>
         <td><%= article.category.name %></td>
         <td><%= article.user.name %></td>
         <td><%= link_to 'Show', article %></td>
